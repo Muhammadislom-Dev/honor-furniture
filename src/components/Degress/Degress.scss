@@ -1,0 +1,27 @@
+.degres{
+    background-image: url("../../Assets/img/degres.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 100px 0;
+    text-align: center;
+    margin-top: 65px;
+
+    &__text{
+        font-family: 'Monument Extended';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #fff;
+    }
+
+    &__name{
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 110.089px;
+        line-height: 125%;
+        color: #fff;
+        margin-top: -15px;
+    }
+}

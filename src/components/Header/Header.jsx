@@ -1,7 +1,6 @@
 import React from "react";
 import './Header.scss'
 import { useState } from "react";
-import furniture from '../../Assets/img/furnitures.png'
 import Arrow from "../../Assets/SVG/Arrow";
 import chair1 from '../../Assets/img/chair1.png'
 import chair2 from '../../Assets/img/chair2.png'
@@ -62,7 +61,7 @@ const Header = () => {
                 </div>
 
                 <div className="header__pages">
-                    <button onClick={()=> setActive("firstcard")} className="header__btn">
+                    <button onClick={()=> setActive("firstcard")} className="header__btn" >
                         <div className="header__page-list">
                             <img src={chair1} alt="" className="header__chair" />
                         </div>
