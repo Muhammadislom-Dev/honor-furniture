@@ -5,7 +5,7 @@ import home from '../../Assets/img/chair2.png'
 export default [
     [
         {
-            img:home
+            img:nbu
         }
     ],
     [
@@ -15,7 +15,7 @@ export default [
     ],
     [
         {
-            img:nbu
+            img:home
         }
     ],
     [
