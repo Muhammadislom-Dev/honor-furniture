@@ -1,0 +1,266 @@
+.country-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32.8495px;
+    line-height: 125%;
+    text-align: center;
+    color: #000000;
+    margin: 10px 0;
+    height: 80px;
+    width: 400px;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    overflow: hidden;
+}
+.country-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.country{
+    padding-top: 40px;
+    padding-bottom: 0px;
+    height: 88vh;
+}
+
+.country-footer{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 60px;
+}
+
+.country-img{
+    width: 240px;
+    /* background-color: red; */
+    /* border: 3px solid black; */
+    height: 440px;
+}
+.country-list{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    list-style: none;
+}
+.country-item:nth-child(6){
+    /* position: absolute; */
+   
+    position: absolute;
+    top: 0;
+    left:7%;
+    /* background-color: red; */
+    z-index: 1;
+}
+.country-item:nth-child(5){
+    position: absolute;
+    top: 0;
+    left: 22%;
+   
+    z-index: 2;
+}.country-item:nth-child(4){
+    z-index: 3;
+    /* position: absolute; */
+    position: absolute;
+    top: 0;
+    left: 38%;
+}.country-item:nth-child(3){
+    z-index: 4;
+    /* position: absolute; */
+    position: absolute;
+    top: 0;
+    left: 52%;
+}.country-item:nth-child(2){
+    z-index: 5;
+    /* position: absolute; */
+    position: absolute;
+    top: 0;
+    left: 68%;
+}.country-item:nth-child(1){
+    z-index: 6;
+    /* position: absolute; */
+    position: absolute;
+    top: 0;
+    left: 84%;
+} 
+
+
+
+
+ 
+ 
+
+@media (max-width:1450px) {
+   .container{
+       width: 1280px;
+   }
+}
+
+
+@media (max-width:1290px) {
+   .container{
+       width: 1170px;
+   }
+}
+
+@media (max-width:1180px) {
+   .container{
+       width: 1000px;
+   }
+}
+@media (max-width:1020px) {
+   .container{
+       width: 900px;
+   }
+   .country-img {
+    width: 227px;
+  
+    height: 400px;}
+
+    .country-item:nth-child(6){
+   
+       
+        position: absolute;
+        top: 0;
+        left:0%;
+  
+        z-index: 1;
+    }
+    .country-item:nth-child(5){
+        position: absolute;
+        top: 0;
+        left: 14%;
+       
+        z-index: 2;
+    }.country-item:nth-child(4){
+        z-index: 3;
+   
+        position: absolute;
+        top: 0;
+        left: 28%;
+    }.country-item:nth-child(3){
+        z-index: 4;
+        /* position: absolute; */
+        position: absolute;
+        top: 0;
+        left: 42%;
+    }.country-item:nth-child(2){
+        z-index: 5;
+        /* position: absolute; */
+        position: absolute;
+        top: 0;
+        left: 57%;
+    }.country-item:nth-child(1){
+        z-index: 6;
+        /* position: absolute; */
+        position: absolute;
+        top: 0;
+        left: 71%;
+    } 
+    
+
+}
+
+@media (max-width:920px) {
+   .container{
+       width: 800px;
+   }
+}
+@media (max-width:820px) {
+   .container{
+       width: 700px;
+   }
+   .country-img {
+    width: 187px;
+  
+    height: 400px;}
+    
+} 
+@media (max-width:720px) {
+   .container{
+       width: 600px;
+   }
+ 
+} 
+@media (max-width:620px) {
+   .container{
+       width: 500px;
+   }
+   .country-img {
+    width: 145px;
+    height: 400px;
+}
+.bottom-item:nth-child(2){
+    margin-left: 215px;
+}
+} 
+@media (max-width:520px) {
+   .container{
+       width: 400px;
+   }
+   .country-img {
+    width: 105px;
+    height: 350px;
+}
+.bottom-item:nth-child(2){
+    margin-left: 128px;
+}
+ 
+} 
+@media (max-width:420px) {
+   .container{
+       width: 300px;
+   }
+   .country .container{
+    width: 100%;
+}
+.bottom-item:nth-child(2){
+    margin-left: 0px;
+}
+.country-title{
+    width: 312px;
+    font-size: 28px;
+    height: 68px;
+}
+.country-footer{
+    margin-top: 8px;
+}
+.country{
+    padding-top: 32px;
+    padding-bottom: 0px;
+    height: 69vh;
+}
+.country .container{
+    width: 100%;
+}
+.country-img {
+    width: 135px;
+    height: 350px;
+}
+.country-item:nth-child(6) {
+    position: absolute;
+    top: 0;
+    left: -9%;}
+
+    .country-item:nth-child(5) {
+        position: absolute;
+        top: 0;
+        left: 5%;}
+        .country-item:nth-child(4) {
+            position: absolute;
+            top: 0;
+            left: 17%;}
+            .country-item:nth-child(3) {
+                position: absolute;
+                top: 0;
+                left: 32%;}
+                .country-item:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 46%;}
+                    .country-item:nth-child(1) {
+                        position: absolute;
+                        top: 0;
+                        left: 58%;}
+}
