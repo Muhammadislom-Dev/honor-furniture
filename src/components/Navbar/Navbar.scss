@@ -47,13 +47,29 @@
         font-size: 14.0833px;
         line-height: 24px;
         color: rgba(0, 0, 0, 0.5);
-        transition: 0.8s;
-        padding: 5px 0;
+        transition: 0.3s;
+        display: block;
+        position: relative;
+        padding-bottom: 5px;
 
-        &:hover{
-            text-decoration: underline;
-            padding-bottom: 5px;
-        }
+       &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            background: #3A896A;
+            border-radius: 23px 10px 0px 0px;
+            transition: 0.3s;
+       }
+       &:hover::before{
+            transform: scaleX(1);
+       }
+       &:hover{
+        color: #3A896A;
+       }
     }
 
     &__lists{
@@ -85,6 +101,11 @@
 
     &__phone{
         text-decoration: none;
+        transition: 0.5s;
+
+        &:hover{
+            transform: scale(1.15);
+        }
     }
 
     &__title{
@@ -92,6 +113,7 @@
         align-items: center;
         margin-top: -3px;
         margin-left: 12px;
+        transition: 0.5s;
     }
 
     &__names{
@@ -108,6 +130,11 @@
         width: 200px;
         height: 58px;
         border-radius: 4.52162px;
+        transition: 0.5s;
+
+        &:hover{
+            transform: scale(1.15);
+        }
     }
 }
 
