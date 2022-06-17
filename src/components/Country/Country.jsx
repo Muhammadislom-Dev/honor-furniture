@@ -1,4 +1,4 @@
-import "./Country.scss";
+import "./Country.css";
 import CountryFlag from "../../Assets/img/3.png"
 
 const  Country=()=>{

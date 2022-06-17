@@ -1,4 +1,4 @@
-import './Footer.scss'
+import './Footer.css'
 import AbbaCoding from "../../Assets/img/1.png";
 import AbbaMedia from "../../Assets/img/2.png";
 
