@@ -5,9 +5,7 @@ import AbbaMedia from "../../Assets/img/2.png";
 const Footer = ()=>{
     return(
        <footer className="footer">
-        
         <div className="footer-header">
-         
         <div className="container">
                  <div className="footer-top">
                    <p className="footer-text">

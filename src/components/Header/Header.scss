@@ -15,9 +15,10 @@
         width: 64px;
         height: 64px;
         border-radius: 50%;
-        position: absolute;
-        top: 60%;
-        left: 75%;
+        position: fixed;
+        z-index: 1;
+        top: 78%;
+        left: 76%;
         cursor: pointer;
     }
 

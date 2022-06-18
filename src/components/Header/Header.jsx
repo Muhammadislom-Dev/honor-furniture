@@ -9,6 +9,8 @@ import chair4 from '../../Assets/img/chair4.png'
 import message from '../../Assets/img/message.png'
 import Card from "./Card";
 import data from "./data";
+import {Link} from 'react-router-dom'
+
 
 const Header = () => {
 
@@ -26,7 +28,10 @@ const Header = () => {
                         <h2 className="header__name">Specially designed products</h2>
                         <p className="header__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                         <div className="header__titles">
-                            <a href="#" className="header__cataloge">Catalogue <Arrow className="header__arrow" /> </a>
+                            {/* <a href="#" className="header__cataloge">Catalogue <Arrow className="header__arrow" /></a> */}
+                            <Link className="header__cataloge" to="catagory1">
+                                Catalogue <Arrow className="header__arrow" />
+                            </Link>
                             <a href="#" className="header__about">About</a>
                         </div>
                     </div>
