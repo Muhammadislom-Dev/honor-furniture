@@ -1,0 +1,23 @@
+.catagory{
+    background-image: url("../../Assets/img/classics.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 150px 0 300px 0;
+    position: relative;
+
+    &__list{
+        list-style: none;
+        position: absolute;
+        left: 81%;
+        top: 22%;
+    }
+
+    &__lists{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        position: absolute;
+        top: 82%;
+        left: 8.5%;
+    }
+}
