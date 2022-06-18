@@ -6,7 +6,7 @@ const Card = ({date, cardIndexs}) =>{
             {
                 date[cardIndexs].map(items =>(
                     <div className='cards'>
-                        <img className="sublimepage__pictures img-fluid" src={items.img} alt="" />
+                        <img className="header__pictures img-fluid" src={items.img} alt="" />
                     </div>
                 ))
             }
