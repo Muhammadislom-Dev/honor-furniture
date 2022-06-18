@@ -1,0 +1,117 @@
+.catalogy{
+    background-image: url("../../Assets/img/classicchair.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 150px 0 300px 0;
+    position: relative;
+
+    &__name{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 49.8751px;
+        width: 450px;
+        margin: 0 auto;
+        line-height: 125%;
+        color: #FFFFFF;
+        text-align: center;
+        text-shadow: 0px 6.07317px 6.07317px rgba(0, 0, 0, 0.25);
+    }
+
+    &__title{
+        width: 309.73px;
+        height: 75.91px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: #000;
+        margin-top: 35px;
+        border: 1.51829px solid #FFFFFF;
+    }
+
+    &__link{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        margin-left:75px;
+        font-size: 22.7744px;
+        line-height: 125%;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    &__img{
+        margin-left: 10px;
+    }
+
+    &__list{
+        position: absolute;
+        list-style: none;
+        left: 81%;
+        top: 25%;
+    }
+
+    &__item{
+        margin-bottom: 15px;
+    }
+
+    &__number{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48.6px;
+        line-height: 125%;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    &__numbers{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 34.2px;
+        line-height: 125%;
+        color: #FFFFFF;
+        z-index: 0.3;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover{
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 45px;
+        }
+    }
+
+    &__lists{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 83%;
+        left: 9.5%;
+    }
+
+    &__btn{
+        width: 14px;
+        height: 14px;
+        background-color: #FFFFFF;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__btns{
+        width: 14px;
+        height: 14px;
+        background: #BEBEBE;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__items{
+        margin: 10px;
+    }
+}
