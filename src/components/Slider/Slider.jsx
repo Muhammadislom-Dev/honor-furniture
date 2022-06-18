@@ -22,7 +22,7 @@ function SliderBox(){
                 <div className="slider__infoBox infos">
                     <h2 className="infos__title">Some useful blogposts</h2>
                     <p className="infos__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
-                    <a className="infos__link">Read more</a>
+                    <a href="#" className="infos__link">Read more</a>
                 </div>
             </div>
             <div className="slider__rightBox">
