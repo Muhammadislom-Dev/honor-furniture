@@ -4,7 +4,7 @@ import './Navbar.scss'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import yurak from '../../Assets/img/yurak.png'
-
+import { Link } from "react-router-dom";
 import ellipse1 from '../../Assets/img/Ellipse 84.png'
 import ellipse2 from '../../Assets/img/Ellipse 85.png'
 import ellipse3 from '../../Assets/img/Ellipse 86.png'
@@ -20,7 +20,7 @@ return(
     <div className="navbar">
         <div className="container">
             <div className="navbar__page">
-                <h2 className="navbar__name">HONOR</h2>
+                <Link className="navbar__name" to="/"><h2 className="navbar__name">HONOR</h2></Link>
                 <ul className="navbar__list">
                     <li className="navbar__item">
                         <a href="#" className="navbar__link">Home page</a>
