@@ -4,11 +4,11 @@ import Category from './components/Category/Category';
 import Country from './components/Country/Country';
 import Footer from './components/Footer/Footer';
 import SliderBox from './components/Slider/Slider';
-
 import HeaderInput from './Page/HeaderInput/HeaderInput';
 import Catagory1 from './Page/Catagory1/Catagory1';
 import Catagory2 from './Page/Catagory2/Catagory2';
 import Catagory3 from './Page/Catagory3/Catagory3';
+import AboutPage from './Page/AboutPage/AboutPage';
 
 
 function App() {
@@ -16,11 +16,10 @@ function App() {
 
   return (
     <div className="App">
-
         <Switch>
             <Route exact path="/">
             <HeaderInput />
-            <Category />
+            {/* <Category /> */}
             <SliderBox />
             <Country />
             <Footer />
@@ -33,6 +32,9 @@ function App() {
             </Route>
             <Route path="/catagory3">
                 <Catagory3 />
+            </Route>
+            <Route path="/about">
+               <AboutPage />
             </Route>
         </Switch>
     </div>
