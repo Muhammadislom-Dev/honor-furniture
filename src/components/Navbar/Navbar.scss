@@ -1,6 +1,6 @@
 .nav{
-    background-color: #eee;
     padding: 40px 0 10px 0;
+    background-color: #eee;
 }
 
 .container{
@@ -13,6 +13,46 @@
 
 
 .navbar{
+
+    &__modal-btn{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        margin-top: 55px;
+        margin-left: 120px;
+        // position: absolute;
+        // left: 45%;
+    }
+
+    &__modal-list{
+        list-style: none;
+    }
+    &__modal-item{
+        margin: 10px 0;
+    }
+
+    &__modal-link{
+        text-decoration: none;
+        font-size: 12px;
+        color: #000;
+        margin-left: -25px;
+        font-weight: 500;
+        font-family: 'Roboto';
+        line-height: 16px;
+    }
+
+    &__modal-close{
+        width: 25px;
+        height: 25px;
+    }
+
+    &__btn{
+        display: none;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
 
     &__page{
         display: flex;
@@ -140,7 +180,13 @@
     }
 }
 
+ .ReactModal__Overlay  .ReactModal__Content {
+    background-color: #DBDBDB;
+}
 
+ .ReactModal__Overlay{
+    background-color: red;
+}
 
 @media (max-width:1350px) {
     
@@ -242,6 +288,14 @@
         &__list{
             display: none;
         }
+        &__btn{
+            display: block;
+        }
+        &__page{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -278,7 +332,17 @@
     .navbar{
 
         &__lists{
-            width: 320px;
+            width: 310px;
+            margin-left: -10px;
         }
+
+        &__modal-btn{
+            margin-left: 80px;
+        }
+
+        &__modal-link{
+            font-size: 10px;
+        }
+        
     }
 }

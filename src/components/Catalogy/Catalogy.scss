@@ -1,7 +1,7 @@
 .catalogy{
     background-image: url("../../Assets/img/classicchair.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     padding: 150px 0 300px 0;
     position: relative;
 
@@ -113,5 +113,127 @@
 
     &__items{
         margin: 10px;
+    }
+}
+
+@media (max-width:1350px) {
+    
+    .container{
+        width: 1160px;
+    }
+}
+
+@media (max-width:1160px) {
+    
+    .container{
+        width: 1000px;
+    }
+}
+
+@media (max-width:1020px) {
+    
+    .container{
+        width: 900px;
+    }
+}
+
+@media (max-width:920px) {
+    
+    .container{
+        width: 800px;
+    }
+}
+
+@media (max-width:820px) {
+    
+    .container{
+        width: 700px;
+    }
+}
+
+@media (max-width:720px) {
+    
+    .container{
+        width: 600px;
+    }
+}
+
+@media (max-width:620px) {
+    
+    .container{
+        width: 500px;
+    }
+
+    .catalogy{
+
+        &__name{
+            font-size: 45px;
+            width: 380px;
+        }
+
+        &__number{
+            font-size: 40px;
+        }
+        &__numbers{
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width:520px) {
+    
+    .container{
+        width: 400px;
+    }
+
+    .catalogy{
+        position: relative;
+
+        &__title{
+            width: 250px;
+            height: 68px;
+            margin-top: 25px;
+        }
+
+        &__name{
+            font-size: 35px;
+            width: 300px;
+        }
+
+        &__link{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        &__list{
+            position: absolute;
+            list-style: none;
+            left: 77%;
+            top: 35%;
+        }
+        
+        &__number{
+            font-size: 30px;
+        }
+        &__numbers{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width:420px) {
+    
+    .container{
+        width: 330px;
+    }
+
+    .catalogy{
+
+        &__list{
+            position: absolute;
+            list-style: none;
+            left: 72%;
+            top: 55%;
+        }
     }
 }
