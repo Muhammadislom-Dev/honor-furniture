@@ -3,7 +3,7 @@
     justify-content: space-between;
     width: 100%;
     height: 600px;
-    margin-top: -15px;
+    margin-top: 40px;
     position: relative;
 
     &__leftBox {
@@ -157,3 +157,32 @@
 
 }
 
+
+
+@media (max-width:420px) {
+    
+    .container{
+        width: 350px;
+    }
+
+    .slider{
+
+        &__rightBtn{
+            position: absolute;
+            top: 45%;
+            z-index: 100;
+            left: 88%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        &__leftBtn{
+            top: 45%;
+        }
+
+        &__rightBox{
+            margin-top: -25px;
+        }
+    }
+}
