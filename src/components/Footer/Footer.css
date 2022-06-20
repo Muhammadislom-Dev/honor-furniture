@@ -31,12 +31,30 @@
     color: #BEBEBE;
     padding: 5px 0;
     transition: 0.3s;
+    display: block;
+    position: relative;
+    padding-bottom: 5px;
     text-decoration: none;
 }
 
-.footer-link:hover {
-    text-decoration: underline;
+.footer-link::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    transform: scaleX(0);
+    background: #fff;
+    border-radius: 23px 10px 0px 0px;
+    transition: 0.3s;
 }
+
+.footer-link:hover::before{
+    transform: scaleX(1);
+}
+
+
 
 .footer-title {
     color: white;
@@ -186,6 +204,10 @@
    .container{
        width: 500px;
    }
+
+   .footer-list{
+    margin: 20px 20px;
+   }
 } 
 @media (max-width:520px) {
    .container{
@@ -211,5 +233,10 @@
    .container{
        width: 300px;
    }
+
+   .footer-list{
+    width: 25%;
+    margin: 20px 10px;
+    }
 
 }

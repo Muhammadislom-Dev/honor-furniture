@@ -11,10 +11,43 @@ import ellipse3 from '../../Assets/img/Ellipse 86.png'
 import ellipse4 from '../../Assets/img/Ellipse 87.png'
 import ellipse5 from '../../Assets/img/Ellipse 88.png'
 import Phone from "../../Assets/SVG/Phone";
+import btn from '../../Assets/img/btn.png'
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import close from '../../Assets/img/close.png'
 
-
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '83%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-200%',
+      height: "100vh",
+      backgroundColor: "#eee",
+      transform: 'translate(-50%, -50%)',
+    },
+  };
 
 const Navbar = () => {
+
+    let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = '#DBDBDB';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+
 return(
 <div className="nav">
     <div className="navbar">
@@ -52,7 +85,13 @@ return(
                             </div>
                         </a>
                     </li>
+
                 </ul>
+                <li className="navbar__toggle">
+                    <button onClick={openModal} className="navbar__btn">
+                        <img src={btn} alt="" className="navbar__image" />
+                    </button>
+                </li>
             </div>
         </div>
     </div>
@@ -97,6 +136,36 @@ return(
         </Splide>
         </div>
     </div>
+
+    <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal">
+        <button className="navbar__modal-btn" onClick={closeModal}><img src={close} alt="" className="navbar__modal-close" /></button>
+
+        <ul className="navbar__modal-list">
+            <li className="navbar__modal-item">
+                <a href="#" className="navbar__modal-link">Home Page</a>
+            </li>
+            <li className="navbar__modal-item">
+                <a href="#" className="navbar__modal-link">Contacts</a>
+            </li>
+            <li className="navbar__modal-item">
+                <a href="#" className="navbar__modal-link">All Production</a>
+            </li>
+            <li className="navbar__modal-item">
+                <a href="#" className="navbar__modal-link">Terms and Conditions</a>
+            </li>
+            <li className="navbar__modal-item">
+                <a href="#" className="navbar__modal-link">Delivery</a>
+            </li>
+            <li className="navbar__modal-item">
+                <a href="#" className="navbar__modal-link">Hot Sales</a>
+            </li>
+        </ul>
+      </Modal>
 </div>
 )
 }
