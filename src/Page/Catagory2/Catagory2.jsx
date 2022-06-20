@@ -12,7 +12,7 @@ const Catagory2 = () => {
         <div className="catagory2">
             <Navbar />
             <Catagory />
-            <Category />
+            {/* <Category /> */}
             <SliderBox />
             <Country />
             <Footer />
