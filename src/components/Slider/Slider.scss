@@ -30,6 +30,7 @@
         background-color: transparent;
         border: none;
         outline: none;
+        cursor: pointer;
     }
 
     &__leftBtn{
@@ -40,6 +41,7 @@
         transform:  matrix(-1, 0, 0, 1, 0, 0);;
         background-color: transparent;
         border: none;
+        cursor: pointer;
         outline: none;
     }
 
@@ -84,6 +86,9 @@
         color: #fff;
         width: 80%;
         margin-bottom: 10px;
+        text-overflow: ellipsis;
+        white-space: wrap;
+        overflow: hidden;
     }
 
     a {

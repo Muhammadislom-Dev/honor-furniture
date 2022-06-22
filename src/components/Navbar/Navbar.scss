@@ -285,7 +285,7 @@
     }
     .navbar{
 
-        &__list{
+        &__link, &__items{
             display: none;
         }
         &__btn{
