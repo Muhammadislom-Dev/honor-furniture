@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from 'react-reveal/Fade';
 import './Header.scss'
 import { useState } from "react";
 import Arrow from "../../Assets/SVG/Arrow";
@@ -20,42 +21,46 @@ const Header = () => {
         <div className="header">
             <div className="container">
                 <div className="header__page">
-                    <div className="header__left">
-                        <div className="header__search">
-                            <input type="search" placeholder="Furniture" className="header__input" />
-                            <button className="header__button">Search</button>
+                    <Fade left>
+                        <div className="header__left">
+                            <div className="header__search">
+                                <input type="search" placeholder="Furniture" className="header__input" />
+                                <button className="header__button">Search</button>
+                            </div>
+                            <h2 className="header__name">Specially designed products</h2>
+                            <p className="header__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                            <div className="header__titles">
+                                {/* <a href="#" className="header__cataloge">Catalogue <Arrow className="header__arrow" /></a> */}
+                                <Link className="header__cataloge" to="catagory1">
+                                    Catalogue <Arrow className="header__arrow" />
+                                </Link>
+                                <a href="#" className="header__about">About</a>
+                            </div>
                         </div>
-                        <h2 className="header__name">Specially designed products</h2>
-                        <p className="header__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-                        <div className="header__titles">
-                            {/* <a href="#" className="header__cataloge">Catalogue <Arrow className="header__arrow" /></a> */}
-                            <Link className="header__cataloge" to="catagory1">
-                                Catalogue <Arrow className="header__arrow" />
-                            </Link>
-                            <a href="#" className="header__about">About</a>
-                        </div>
-                    </div>
-                    <div className="header__right">
-                        {/* <img src={furniture} alt="" className="header__img" /> */}
-                        {active === "firstcard" && 
-                        <Card date={data} cardIndexs={0} /> }
-                        {active === "secondcard" && 
-                        <Card date={data} cardIndexs={1} /> }
-                        {active === "thirstcard" && 
-                        <Card date={data} cardIndexs={2} /> }
-                        {active === "fixed" && 
-                        <Card date={data} cardIndexs={3} /> }
+                    </Fade>
+                     <Fade right>
+                        <div className="header__right">
+                            {/* <img src={furniture} alt="" className="header__img" /> */}
+                            {active === "firstcard" && 
+                            <Card date={data} cardIndexs={0} /> }
+                            {active === "secondcard" && 
+                            <Card date={data} cardIndexs={1} /> }
+                            {active === "thirstcard" && 
+                            <Card date={data} cardIndexs={2} /> }
+                            {active === "fixed" && 
+                            <Card date={data} cardIndexs={3} /> }
 
-                        <div className="header__box">
-                            <a href="#" className="header__number">01-</a>
-                            <a href="#" className="header__numbers">02-</a>
-                            <a href="#" className="header__numbers">03-</a>
-                        </div>
+                            <div className="header__box">
+                                <a href="#" className="header__number">01-</a>
+                                <a href="#" className="header__numbers">02-</a>
+                                <a href="#" className="header__numbers">03-</a>
+                            </div>
 
-                        <button className="header__message">
-                            <img src={message} alt="" className="header__picture" />
-                        </button>
-                    </div>
+                            <button className="header__message">
+                                <img src={message} alt="" className="header__picture" />
+                            </button>
+                        </div>
+                     </Fade>
                 </div>
 
                 <div className="header__dote">
