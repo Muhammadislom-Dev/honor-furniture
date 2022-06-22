@@ -9,6 +9,8 @@ import Catagory1 from './Page/Catagory1/Catagory1';
 import Catagory2 from './Page/Catagory2/Catagory2';
 import Catagory3 from './Page/Catagory3/Catagory3';
 import AboutPage from './Page/AboutPage/AboutPage';
+import Client from './components/Client/Client';
+import Sofa from './components/Sofa/Sofa';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
             <Route exact path="/">
             <HeaderInput />
             {/* <Category /> */}
+            <Sofa />
+            <Client />
             <SliderBox />
             <Country />
             <Footer />
