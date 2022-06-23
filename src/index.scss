@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    // width: 100%;
+    overflow-x: hidden;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.buy-modal{
+    // display: none;
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    transition: 0.4s;
+    z-index: 500005;
+    background-color: white;    
+    align-items: center;
+    justify-content: center;
+    padding: 40px 100px;   
+    overflow-y: scroll;   
+    h1{
+        color: black;
+        text-align: center;
+    }
+    .row{
+        .col-md-6{
+            margin-top: 70px;
+            .price{
+                text-align: left;
+            }
+            .col-md-12{            
+                position: relative;
+                cursor: pointer;
+                background-color: white;
+                transition: 0.3s;        
+                // border: solid 1px; 
+                padding-right: 150px;                       
+                h5{
+                    font-size: 30px;
+                    @media (max-width:500px){
+                        padding-right: 20px;
+                        font-size: 17px;
+                    }
+                }
+                .answer{
+                    padding: 10px;
+                    .body{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        // border: solid 1px;
+                        padding: 0;
+                        p{
+                            font-size: 18px;
+                            // border: solid 1px;
+                        }
+                        h6{
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                        .delet-checkbox, .eye-checkbox[type="checkbox"]{
+                            display: none;
+                        }
+                        .delet-prod{
+                            width: 20px;
+                            height: 20px;
+                            padding-bottom: 2px;                        
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: rgb(224, 224, 224);
+                            color: black;
+                            font-size: 17px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        .delet-checkbox[type="checkbox"]:checked ~ .delet-prod{
+                            background-color: red;
+                            color: white;
+                        }                        
+                        .eye-prod{
+                            width: 24px;
+                            height: 18px;
+                            padding-bottom: 1px;                       
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: black;
+                            color: black;
+                            font-size: 17px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            .visibleoff{
+                                display: none;
+                                color: white;
+                            }
+                            .visible{
+                                color: white;
+                            }
+                        }
+                        .eye-checkbox[type="checkbox"]:checked ~ .eye-prod .visibleoff {
+                            display: block;
+                        }
+                        .eye-checkbox[type="checkbox"]:checked ~ .eye-prod .visible {
+                            display: none;
+                        }
+                    }
+                    .click, .payme{
+                        border-radius: 0;
+                        border: solid 1px black;
+                        color: black;
+                        padding: 10px 40px;
+                        &:hover{
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                    .cash, .location{
+                        border-radius: 0;
+                        border: solid 1px black;
+                        color: white;
+                        padding: 10px 40px;
+                        background-color: black;
+                        &:hover{
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                }
+                .fa-chevron-down{                    
+                    color: black;   
+                    cursor: pointer; 
+                    font-size: 20px;                                                
+                }                                              
+            }
+            .delivery{
+                margin-top: 20px;
+            }
+        }
+    }
+    .fa-times{
+        position: absolute;
+        color: black;
+        top: 30px;
+        right: 30px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .btns{
+        // border: solid 1px;
+        display: flex;  
+        margin-top: 150px;      
+        align-items: center;
+        justify-content: center;
+        .btn{
+            padding: 10px 60px;     
+            border-radius: 0;
+            color: white;
+            font-size: 18px;
+            background-color: darkcyan;      
+            &:hover{
+                background-color: white;
+                color: darkcyan;
+                border: solid 2px darkcyan;
+            }        
+        }
+    }
+}
+.show-modal{
+     top: 10%;
+}
+.contrast-buy{
+    background-color: rgba(0, 0, 0, 0.699);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500003;
+    // display: none;
+}
+.loader{
+    .load{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        border: solid 10px white;
+        border-left-color: #EC691F;
+        border-top-color: #EC691F;
+        animation-name: loader;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes loader {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+//   .container{
+//     width: 1140px;
+//     margin: 0 auto;
+//   }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  
+  @import "./components/Slider/Slider.scss";
+  
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
