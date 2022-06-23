@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
 
-
- ReactDOM.render(
+ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Suspense fallback={<div className='loader' style={{fontSize: "50px", fontWeight: 500, fontFamily: 'Fredoka', width: "100%", height: "100%", justifyContent: "center", display: "flex", alignItems: "center", position: "absolute"}}><div className="load"></div></div>}>
       <App />
-    </BrowserRouter>
+    </Suspense>
   </React.StrictMode>,
-   document.getElementById('root')
+  document.getElementById('root')
 );
-
