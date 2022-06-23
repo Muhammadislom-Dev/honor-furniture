@@ -37,6 +37,10 @@
     text-decoration: none;
 }
 
+.footer-link:hover{
+    color: #fff;
+}
+
 .footer-link::before{
     content: '';
     position: absolute;
@@ -60,6 +64,7 @@
     color: white;
     font-weight: 500;
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .footer-list {
@@ -97,6 +102,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
+}
+
+.bottom-list{
+    display: flex;
+    align-items: center;
 }
 
 .bottom-text {
@@ -114,6 +125,7 @@
     font-size: 11.8686px;
     line-height: 15px;
     color: #FFFFFF;
+    margin-top: 18px;
 }
 
 .bottom-item {
@@ -231,12 +243,16 @@
 } 
 @media (max-width:420px) {
    .container{
-       width: 300px;
+       width: 330px;
    }
 
    .footer-list{
-    width: 25%;
+    width: 45%;
     margin: 20px 10px;
+    }
+
+    .footer-link{
+        font-size: 11px;
     }
 
 }

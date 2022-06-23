@@ -6,15 +6,9 @@
         background: #FFFFFF;
         box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
         border-radius: 10.0244px;
-        width: 168px;
+        width: 188px;
         height: 200px;
         margin: 20px 40px;
-        transition: 0.3s;
-
-        &:hover{
-            transform: scale(1.1);
-            cursor: pointer;
-        }
     }
 
     &__name{
@@ -54,7 +48,7 @@
 
     &__item:nth-child(3){
         margin-top: -20px;
-        margin-left: 12px;
+        margin-left: 25px;
     }
 
     &__star{
@@ -69,14 +63,6 @@
         &:checked::before{
             content: "\2605";
             position: absolute;
-        }
-    }
-
-    &__pic, &__pics, &__picture{
-        transition: 0.5s;
-
-        &:hover{
-            transform: scale(1.2);
         }
     }
 
@@ -98,6 +84,7 @@
     &__page{
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     &__title{
@@ -240,10 +227,22 @@
     }
 }
 
+
+
 @media (max-width:620px) {
     
     .container{
         width: 500px;
+    }
+
+    .client{
+        &__titles{
+            margin: 10px 10px;
+        }
+
+      &__pics{
+        width: 200px;
+      }
     }
 }
 
@@ -255,10 +254,14 @@
 
     .client{
 
+        &__names{
+            font-size: 14px;
+        }
+
 
         &__list{
-            width: 130px;
-            height: 200px;
+            width: 160px;
+            height: 180px;
             margin: 20px 10px;
         }
 
@@ -279,10 +282,10 @@
             margin-left: 20px;
         }
         &__names{
-            margin-left: -5px;
+            margin-left: 5px;
         }
         &__item:nth-child(3){
-            margin-left: 0;
+            margin-left: 10px;
         }
 
     }
@@ -312,7 +315,7 @@
             margin: 20px 5px;
         }
         &__list{
-            width: 110px;
+            width: 130px;
             height: 160px;
             margin: 20px 7px;
         }

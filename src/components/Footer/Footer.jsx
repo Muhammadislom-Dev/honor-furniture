@@ -113,7 +113,6 @@ const Footer = ()=>{
                            <li className="bottom-item">
                                <img src={AbbaMedia} alt="" className="bottom-img" />
                            </li>
-
                        </ul>
                        </div>
            </div>
