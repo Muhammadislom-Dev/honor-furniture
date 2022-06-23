@@ -10,7 +10,7 @@ import './Catagory2.scss'
 const Catagory2 = () => {
     return(
         <div className="catagory2">
-            <Navbar />
+            {/* <Navbar /> */}
             <Catagory />
             {/* <Category /> */}
             <SliderBox />
