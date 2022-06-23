@@ -34,9 +34,6 @@
         line-height: 20px;
         color: #fff;
         width: 240px;
-        text-overflow: ellipsis;
-        white-space: wrap;
-        overflow: hidden;
     }
 
     &__item{
@@ -110,9 +107,6 @@
         font-size: 14px;
         line-height: 20px;
         color: #656565;
-        text-overflow: ellipsis;
-        white-space: wrap;
-        overflow: hidden;
     }
 
     &__right{
@@ -139,9 +133,6 @@
         line-height: 20px;
         color: #656565;
         width: 220px;
-        text-overflow: ellipsis;
-        white-space: wrap;
-        overflow: hidden;
     }
 
     &__texts{
@@ -212,6 +203,11 @@
             margin-left: 10px;
         }
 
+        &__page, &__box{
+            justify-content: center;
+            display: flex;
+        }
+
         &__pic{
             width: 220px;
         }
@@ -219,11 +215,16 @@
         &__list, &__lists{
             width: 400px;
         }
+        &__box{
+            margin-left: 10px;
+        }
 
         &__text{
             font-size: 10px;
             width: 150px;
         }
+
+   
 
         &__imgs{
             width: 480px;
@@ -293,8 +294,7 @@
        }
 
        &__title{
-        width: 600px;
-        // margin-left: 15px;
+        width: 650px;
         height: 400px;
        }
 
@@ -306,7 +306,7 @@
 
        &__right{
         width: 600px;
-        margin-left: 50px;
+        margin-left: -50px;
        }
 
        &__imgs{
@@ -316,7 +316,7 @@
 
        &__left{
         width: 600px;
-        margin-left: 50px;
+        margin-left: -50px;
        }
 
        &__pictures{
@@ -371,7 +371,7 @@
        &__right{
         width: 550px;
         // margin-left: 50px;
-        margin-left: 25px;
+        margin-left: -25px;
        }
 
        &__imgs{
@@ -381,7 +381,7 @@
 
        &__left{
         width: 550px;
-        margin-left: 25px;
+        margin-left: -25px;
        }
 
        &__pictures{
@@ -404,6 +404,7 @@
 
         &__page{
             flex-wrap:wrap;
+            flex-direction: column;
             justify-content: center;
         }
 
@@ -422,7 +423,6 @@
 
        &__title{
         width: 450px;
-        // margin-left: 15px;
         height: 400px;
        }
 
@@ -497,6 +497,7 @@
         &__right{
             width: 360px;
             height: 130px;
+            margin-left: 5px;
         }
 
         &__texts2{
@@ -514,6 +515,7 @@
         &__left{
             width: 360px;
             height: 130px;
+            margin: 4px;
         }
 
         &__image{
@@ -547,32 +549,36 @@
 @media (max-width:420px) {
     
     .container{
-        width: 350px;
+        width: 330px;
     }
 
     .sofa{
 
+   
+
         &__list, &__lists{
-            width: 320px;
+            width: 310px;
+            margin-left: -2px;
         }
 
         &__title{
-            width: 320px;
+            width: 310px;
+            margin-left: -15px;
         }
 
         &__right{
-            margin-left: 15px;
-            width: 320px;
+            margin-left: -12px;
+            width: 310px;
         }
 
         &__imgs{
             width: 180px;
-            margin-left: -10px;
+            margin-left: -15px;
         }
 
         &__left{
-            width: 320px;
-            margin-left: 15px;
+            width: 310px;
+            margin-left: -12px;
         }
     }
 }

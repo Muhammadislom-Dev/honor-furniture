@@ -10,7 +10,7 @@ import Footer from '../../components/Footer/Footer'
 const Catagory1 = () => {
     return(
         <div className="catagory1">
-            <Navbar />
+            {/* <Navbar /> */}
             <Catalogy />
             {/* <Category /> */}
             <SliderBox />
