@@ -1,8 +1,14 @@
 
 
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
 .header{
     background-color: #eee;
-    padding: 40px 0 30px 0;
+    padding: 180px 0 30px 0;
+    // margin: 100px 0;
     position: relative;
 
     &__page{
@@ -17,7 +23,7 @@
         border-radius: 50%;
         position: fixed;
         z-index: 1;
-        top: 78%;
+        top: 65%;
         left: 76%;
         cursor: pointer;
     }
@@ -28,10 +34,12 @@
 
 
     &__search{
-        border: 1.7px solid #000000;
-        width: 300px;
+        border: 2px solid #000000;
+        width: 295px;
         height: 39px;
         background-color: transparent;
+        display: flex;
+        align-items: center;
     }
 
     &__btns{
@@ -60,7 +68,7 @@
     }
 
     &__button{
-        width: 100.01px;
+        width: 105px;
         height: 40px;
         background-color: #000000;
         border: 2px solid #000;
@@ -76,11 +84,12 @@
     &__name{
         font-family: 'Oswald', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 32.8495px;
         line-height: 125%;
         color: #000000;
         width: 300px;
+        margin-top: 15px;
     }
 
     &__text{
@@ -88,7 +97,7 @@
         line-height: 125%;
         font-style: normal;
         font-weight: 300;
-        width: 215px;
+        width: 285px;
         font-family: 'Oswald', sans-serif;
         text-overflow: ellipsis;
         white-space: wrap;
@@ -106,6 +115,10 @@
         padding: 15px 35px;
         align-items: center;
         color: #000;
+
+        &:hover{
+            color: #000;
+        }
     }
 
     &__arrow{
@@ -127,6 +140,10 @@
         color: #000;
         margin: 0 25px;
         text-decoration: none;
+
+        &:hover{
+            color: #000;
+        }
     }
 
     &__right{
@@ -146,6 +163,10 @@
         line-height: 125%;
         color: #000;
         text-decoration: none;
+
+        &:hover{
+            color:#000;
+        }
     }
 
     &__numbers{
@@ -158,6 +179,11 @@
         opacity: 0.3;
         margin-left: 25px;
         text-decoration: none;
+
+        &:hover{
+            color: #000;
+            opacity: 0.3;
+        }
     }
 
     &__pages{
@@ -225,6 +251,11 @@
         &__pictures{
             height: 400px;
             width: 380px;
+        }
+
+        &__text{
+            font-size: 14px;
+            width: 200px;
         }
     }
 }
@@ -312,6 +343,7 @@
 
         &__page{
             display: flex;
+            justify-content: center;
             flex-direction: column-reverse;
         }
 
@@ -377,10 +409,6 @@
         &__pictures{
             display: none;
         }
-
-        &__pages{
-            left: 1.5%;
-        }
         &__box{
             display: none;
         }
@@ -390,7 +418,7 @@
             width: 170px;
         }
         &__text{
-            font-size: 20px;
+            font-size: 16px;
             line-height: 125%;
         }
     }

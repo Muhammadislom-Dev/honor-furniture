@@ -2,7 +2,8 @@ import React from "react";
 import './Navbar.scss'
 // import styled from 'styled-components'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+// import '@splidejs/react-splide/css';
+import '@splidejs/splide/dist/css/splide.min.css';
 import yurak from '../../Assets/img/yurak.png'
 import { Link } from "react-router-dom";
 import ellipse1 from '../../Assets/img/Ellipse 84.png'
@@ -52,47 +53,49 @@ return(
 <div className="nav">
     <div className="navbar">
         <div className="container">
-            <div className="navbar__page">
-                <Link className="navbar__name" to="/"><h2 className="navbar__name">HONOR</h2></Link>
-                <ul className="navbar__list">
-                    <li className="navbar__item">
-                        <a href="#" className="navbar__link">Home page</a>
-                    </li>
-                    <li className="navbar__item">
-                        <a href="#" className="navbar__link">Contacts</a>
-                    </li>
-                    <li className="navbar__item">
-                        <a href="#" className="navbar__link">All Production</a>
-                    </li>
-                    <li className="navbar__item">
-                        <a href="#" className="navbar__link">Terms and Conditions</a>
-                    </li>
-                    <li className="navbar__item">
-                        <a href="#" className="navbar__link">Delivery</a>
-                    </li>
-                    <li className="navbar__item">
-                        <a href="#" className="navbar__link">Hot Sales</a>
-                    </li>
-                    <li className="navbar__item">
-                        <img src={yurak} alt="" className="navbar__img" />
-                    </li>
-                    <li className="navbar__item navbar__items">
-                        <a href="+998955555555" className="navbar__phone">
-                            <div className="navbar__title">
-                                <Phone />
-                                <p className="navbar__names">+998 95  555 55 55  
-                                    <span> Bepul konsultatsiya</span> </p>
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
-                <li className="navbar__toggle">
-                    <button onClick={openModal} className="navbar__btn">
-                        <img src={btn} alt="" className="navbar__image" />
-                    </button>
+        <div className="navbar__page">
+            <Link className="navbar__name" to="/"><h2 className="navbar__name">HONOR</h2></Link>
+            <ul className="navbar__list">
+                <li className="navbar__item">
+                    <a href="#" className="navbar__link">Home page</a>
                 </li>
-            </div>
+                <li className="navbar__item">
+                    <a href="#" className="navbar__link">Contacts</a>
+                </li>
+                <li className="navbar__item">
+                    <a href="#" className="navbar__link">All Production</a>
+                </li>
+                <li className="navbar__item">
+                    <a href="#" className="navbar__link">Terms and Conditions</a>
+                </li>
+                <li className="navbar__item">
+                    <a href="#" className="navbar__link">Delivery</a>
+                </li>
+                <li className="navbar__item">
+                    <a href="#" className="navbar__link">Hot Sales</a>
+                </li>
+            </ul>
+            <ul className="navbar__list">
+                <li className="navbar__item">
+                    <img src={yurak} alt="" className="navbar__img" />
+                </li>
+                <li className="navbar__item navbar__items">
+                    <a href="tel:+998955555555" className="navbar__phone">
+                        <div className="navbar__title">
+                            <Phone />
+                            <div className="navbar__names">+998 95  555 55 55  
+                                <span> Bepul konsultatsiya</span> </div>
+                        </div>
+                    </a>
+                </li>
+
+            <li className="navbar__toggle">
+                <button onClick={openModal} className="navbar__btn">
+                    <img src={btn} alt="" className="navbar__image" />
+                </button>
+            </li>
+            </ul>
+        </div>
         </div>
     </div>
 
