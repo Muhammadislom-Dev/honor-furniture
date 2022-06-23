@@ -5,8 +5,8 @@ const Card = ({date, cardIndexs}) =>{
         <div>
             {
                 date[cardIndexs].map(items =>(
-                    <div className='cards'>
-                        <img className="header__pictures img-fluid" src={items.img} alt="" />
+                    <div className='box'>
+                        <img className="header__pictures" src={items.img} alt="" />
                     </div>
                 ))
             }
