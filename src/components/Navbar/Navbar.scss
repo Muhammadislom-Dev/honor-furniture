@@ -1,27 +1,29 @@
 .nav{
-    padding: 40px 0 10px 0;
-    background-color: #eee;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
 }
 
 .container{
     width: 1140px;
     margin: 0 auto;
 }
-.navbar-splide .container{
-    padding: 20px 0 40px 0;
-}
-
 
 .navbar{
-
+    
     &__modal-btn{
         background-color: transparent;
         border: none;
         outline: none;
         margin-top: 55px;
         margin-left: 120px;
-        // position: absolute;
-        // left: 45%;
     }
 
     &__modal-list{
@@ -58,6 +60,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        // border: solid 1px gold;
+        width: 100%;
     }
 
     &__list{
@@ -67,31 +71,30 @@
     }
 
     &__name{
-        font-family: 'Poppins';
+        font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
         font-weight: 800;
-        font-size: 21.4412px;
-        line-height: 29px;
+        font-size: 35px;
+        // line-height: 29px;
         color: #000;
         text-decoration: none;
     }
 
     &__item{
-        margin: 0 20px;
+        padding: 0 15px;
     }
 
     &__link{
-        text-decoration: none;
-        font-family: 'Helvetica Neue';
+        text-decoration: none;        
         font-style: normal;
-        font-weight: 400;
-        font-size: 14.0833px;
-        line-height: 24px;
+        font-weight: 500;
+        font-size: 12px;
+        // line-height: 24px;
         color: rgba(0, 0, 0, 0.5);
         transition: 0.3s;
         display: block;
         position: relative;
-        padding-bottom: 5px;
+        // padding-bottom: 5px;
 
        &::before{
             content: '';
@@ -117,7 +120,7 @@
     &__lists{
         display: flex;
         justify-content: center;
-        width: 470px;
+        width: 500px;
         margin: 0 auto;
         padding-left: 25px;
         height: 90px;
@@ -144,6 +147,10 @@
     &__phone{
         text-decoration: none;
         transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
 
         &:hover{
             transform: scale(1.15);
@@ -153,8 +160,6 @@
     &__title{
         display: flex;
         align-items: center;
-        margin-top: -3px;
-        margin-left: 12px;
         transition: 0.5s;
     }
 
@@ -169,16 +174,46 @@
 
     &__items{
         background-color: #000;
-        width: 200px;
-        height: 58px;
         border-radius: 4.52162px;
         transition: 0.5s;
 
         &:hover{
-            transform: scale(1.15);
+            transform: scale(1.05);
         }
     }
 }
+
+// .navbar{
+//     .navbar__page{
+//         padding: 0 100px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         .navbar__name{
+//             font-size: 35px;
+//             font-weight: 800;
+//             font-family: Arial, Helvetica, sans-serif;
+//         }
+//         .navbar__list{
+//             padding-top: 10px;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             li{
+//                 list-style: none;
+//                 a{
+//                     text-decoration: none;
+//                 }
+//                 .navbar__phone{
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                     padding: 10px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
  .ReactModal__Overlay  .ReactModal__Content {
     background-color: #DBDBDB;
@@ -204,7 +239,12 @@
     .navbar{
 
         &__item{
-            margin: 0 12px;
+            margin: 0;
+        }
+
+        &__name{
+            font-size: 30px;
+            font-weight:700;
         }
     }
 }
@@ -218,15 +258,32 @@
     .navbar{
 
         &__item{
-            margin: 0 8px;
+            margin: 0;
+        }
+
+        &__link{
+            font-size: 10px;
+        }
+
+        &__name{
+            font-size: 25px;
+        }
+
+        &__page{
+            display: flex;
+            justify-content: center;
         }
 
         &__items{
-            width: 180px;
+            width: 170px;
             height: 50px;
         }
         &__names{
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        &__phone{
+            width: 170px;
         }
     }
 }
@@ -241,12 +298,20 @@
     .navbar{
 
         &__link{
-            font-size: 12px;
-            line-height: 18px;
+            font-size: 8px;
         }
 
         &__item{
-            margin: 0 8px;
+            margin: 0;
+        }
+
+        &__list{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__title{
+            margin-right: 25px;
         }
 
         &__items{
@@ -255,6 +320,7 @@
         }
         &__names{
             font-size: 12px;
+            width: 110px;
         }
     }
 }
@@ -268,12 +334,15 @@
   .navbar{
 
     &__link{
-        font-size: 10px;
-        line-height: 16px;
+        font-size: 7px;
+    }
+
+    &__name{
+        font-size: 22px;
     }
 
     &__item{
-        margin: 0 5px;
+        margin: 0;
     }
   }
 }
@@ -304,7 +373,24 @@
     .container{
         width: 500px;
     }
+
+    .navbar{
+
+        &__link, &__items{
+            display: none;
+        }
+        &__btn{
+            display: block;
+        }
+        &__page{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
+
+
 
 @media (max-width:520px) {
     
@@ -313,14 +399,22 @@
     }
 
     .navbar__lists{
-        width: 380px;
+        width: 330px;
     }
 
+   .navbar__page{
+    display: flex;
+    justify-content: center;
+   }
+
     .navbar__pic{
-        width: 40px;
+        width: 50px;
         height: 40px;
         margin-top: 25px;
+        object-fit: contain;
     }
+
+
 }
 
 @media (max-width:420px) {
@@ -330,6 +424,14 @@
     }
 
     .navbar{
+
+        &__list{
+            margin-left: -50px;
+        }
+
+        &__name{
+            margin-left: 15px;
+        }
 
         &__lists{
             width: 310px;
@@ -344,5 +446,11 @@
             font-size: 10px;
         }
         
+        &__pic{
+            object-fit: contain;
+            width: 50px;
+            height: 40px;
+        }
+
     }
 }
