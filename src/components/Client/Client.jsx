@@ -1,6 +1,5 @@
 import './Client.scss'
 import person from '../../Assets/img/person.png'
-
 import golden from '../../Assets/img/golden.png'
 import nrg from '../../Assets/img/nrg.png'
 import korzinka from '../../Assets/img/korzinka.png'

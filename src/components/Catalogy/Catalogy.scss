@@ -4,6 +4,7 @@
     background-size: 100% 100%;
     padding: 150px 0 300px 0;
     position: relative;
+    margin-top: 180px;
 
     &__name{
         font-style: normal;
@@ -39,6 +40,10 @@
         line-height: 125%;
         color: #FFFFFF;
         text-decoration: none;
+
+        &:hover{
+            color: #FFFFFF;
+        }
     }
 
     &__img{
@@ -64,6 +69,10 @@
         line-height: 125%;
         color: #FFFFFF;
         text-decoration: none;
+
+        &:hover{
+            color: #FFFFFF;
+        }
     }
 
     &__numbers{
