@@ -21,9 +21,6 @@ import close from '../../Assets/img/close.png'
 
 const Navbar = () => {
 
-
-
-
 return(
    
     <div className="navbar__splide">
@@ -65,7 +62,7 @@ return(
             </SplideSlide>
         </Splide>
         </div>
-</div>
+    </div>
 )
 }
 export default Navbar

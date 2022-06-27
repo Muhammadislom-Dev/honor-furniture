@@ -1,5 +1,4 @@
 import './Sofa.scss'
-
 import chair from '../../Assets/img/Tissue.png'
 import chair1 from '../../Assets/img/west.png'
 import chair2 from '../../Assets/img/wipes.png'

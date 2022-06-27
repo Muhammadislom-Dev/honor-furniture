@@ -546,7 +546,6 @@ const Products = ({english, uzbek, russian, dataProducts, best, dataMenu, dataTi
                                             </Typography>
                                             </AccordionDetails>
                                         </Accordion>
-
                                         <Accordion>
                                             <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}

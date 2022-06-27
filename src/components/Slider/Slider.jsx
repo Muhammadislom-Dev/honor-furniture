@@ -22,17 +22,14 @@ function SliderBox(){
                 <div className="slider__infoBox infos">
                     <h2 className="infos__title">Some useful blogposts</h2>
                     <p className="infos__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
-                    {/* <a href="#" className="infos__link">Read more</a> */}
                     <Link to="/about" className="infos__link" >Read more</Link>
                 </div>
             </div>
             <div className="slider__rightBox">
                 <button onClick={handlerRightBtn} className="slider__rightBtn" style={{display: `${(count !== obj.length - 3) ? "block" : "none" }`}}>
-                    {/* <i className='bx bx-chevron-right'></i> */}
                     <img src={button} alt="" className="slider__button-img" />
                 </button>
                 <button onClick={handlerLeftBtn} className="slider__leftBtn" style={{display: `${(count === 0) ? "none" : "block" }`}}>
-                    {/* <i className='bx bx-chevron-left'></i> */}
                     <img src={button} alt="" className="slider__button-img" />
                 </button>
                 <ul  style={{transform: `translateX(${-count * 300}px)`}} className="slider__list">
