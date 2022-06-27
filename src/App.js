@@ -3,7 +3,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import Products from './components/Products/Products';
-import SavedProducts from './components/Products/SavedProducts';
 import Category from './components/Category/Category';
 import Country from './components/Country/Country';
 import Footer from './components/Footer/Footer';
@@ -17,6 +16,8 @@ import Client from './components/Client/Client';
 import Sofa from './components/Sofa/Sofa';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import { useTranslation } from 'react-i18next';
+import NavbarCopy from './components/Navbar copy/Navbar';
 
 const App = () => {
 
@@ -62,6 +63,49 @@ const App = () => {
     fetchData()
   }, [urlTip]);
 
+  // i18nexus
+
+  // const {t, i18n} = useTranslation()
+
+
+
+
+  // Language components
+
+  const [english, setEnglish] = useState(true);
+  const [russian, setRussian] = useState(false);
+  const [uzbek, setUzbek] = useState(false);   
+  // const [langTitle, setLangTitle] = useState(localStorage.getItem('i18nextLng') ? localStorage.getItem('i18nextLng').toUpperCase() : "") 
+
+  function change1(item) {  
+    // i18n.changeLanguage("ru") 
+    // setLangTitle(localStorage.getItem('i18nextLng').toUpperCase())
+    setRussian(item)
+    setEnglish(!item)
+    setUzbek(!item)
+  }
+  function change2(item) {
+    // i18n.changeLanguage("en") 
+    // setLangTitle(localStorage.getItem('i18nextLng').toUpperCase())
+    setEnglish(item)
+    setRussian(!item)
+    setUzbek(!item)  
+  }
+  function change3(item) { 
+    // i18n.changeLanguage("uz") 
+    // setLangTitle(localStorage.getItem('i18nextLng').toUpperCase())
+    setUzbek(item)
+    setEnglish(!item)
+    setRussian(!item)   
+  }
+
+  // window.addEventListener("load", () => {    
+  //   setRussian(true)
+  //   setEnglish(false) 
+  //   localStorage.setItem("i18nextLng", "en") 
+  //   setLangTitle(localStorage.getItem('i18nextLng').toUpperCase()) 
+  // })
+
   // buy products ----------------------------------------------
 
   const [showBuy, setShowBuy] = useState(false)
@@ -74,90 +118,37 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='App'>
-        {/* <Products dataProducts={dataProducts} dataMenu={dataMenu} dataTip={dataTip} showHandleBuy={showHandleBuy} /> */}
-        <Navbar />
+        <NavbarCopy english={english} russian={russian} uzbek={uzbek} change1={change1} change2={change2} change3={change3} />
         <Switch>
-            <Route exact path="/">
-            <HeaderInput />
+          <Route exact path="/">
+            <HeaderInput />                   
             {/* <Category /> */}
+            <Products english={english} russian={russian} uzbek={uzbek} best={true} all={false} saved={false} dataProducts={dataProducts} dataMenu={dataMenu} dataTip={dataTip} showHandleBuy={showHandleBuy} />
             <Sofa />
             <Client />
             <SliderBox />
             <Country />
             <Footer />
           </Route>
-            <Route path='/catagory1'>
-               <Catagory1 />
-            </Route>
-            <Route  path="/catagory2">
-                <Catagory2 />
-            </Route>
-            <Route path="/catagory3">
-                <Catagory3 />
-            </Route>
-            <Route path="/about">
-               <AboutPage />
-            </Route>
-        </Switch>
-        {/* <SavedProducts /> */}
-
-        <div className={`buy-modal ${!showBuy && "d-none"}`}>
-          <i className='fa fa-times' onClick={() => showHandleBuy(false)}></i>
-          <h1>Please verify your order</h1>
-          <div className='row'>
-            <div className='col-md-6'>
-              <h1 className='price'>Cost: $122299,00</h1>
-              <div className='col-md-12 mt-3 faq'>
-                <div className='d-flex align-items-center justify-content-between'>                 
-                  <h5>Products</h5>                 
-                  <i className='fa fa-chevron-down'></i>                
-                </div>                                
-                <div className='answer'>
-                  <div className='body'>
-                    <p className="title">1. LEVA chair</p>                   
-                    <h6>$400.00</h6>
-                    <div className='d-flex'>
-                      <input type="checkbox" className='delet-checkbox' id='delet' />
-                      <label className='delet-prod' htmlFor='delet'>x</label>
-                      <input type="checkbox" className='eye-checkbox' id='eye' />
-                      <label className='eye-prod mx-3' htmlFor='eye'>
-                        <Visibility className='visible' />
-                        <VisibilityOff className='visibleoff' />
-                      </label>
-                    </div>
-                  </div>
-                </div>                  
-              </div>
-            </div>
-            <div className='col-md-6'>
-              <div className='col-md-12 faq'>
-                <div className='d-flex align-items-center justify-content-between'>                 
-                  <h5>Payment type</h5>                 
-                  <i className='fa fa-chevron-down'></i>                
-                </div>                                
-                <div className='answer d-flex align-items-center justify-content-between'>
-                  <button className='btn click'>Click</button>
-                  <button className='btn payme'>PayMe</button>
-                  <button className='btn cash'>Cash</button>
-                  <StripeCheckout /> 
-                 </div>                  
-              </div>
-              <div className='col-md-12 faq delivery'>
-                <div className='d-flex align-items-center justify-content-between'>                 
-                  <h5>Delivery</h5>                 
-                  <i className='fa fa-chevron-down'></i>                
-                </div>                                
-                <div className='answer d-flex align-items-center justify-content-between'>
-                  <button className='btn location'>Location</button>                
-                </div>                  
-              </div>
-            </div>
-          </div> 
-           <div className='col-md-12 btns'>                              
-            <button className='btn'>VERIFY</button>          
-          </div> 
-        </div> 
-        <div className={`contrast-buy ${!showBuy && "d-none"}`} onClick={() => showHandleBuy(false)}></div>
+          <Route path='/saved'>
+            <Products english={english} russian={russian} uzbek={uzbek} best={false} all={false} saved={true} dataProducts={dataProducts} dataMenu={dataMenu} dataTip={dataTip} showHandleBuy={showHandleBuy} />
+          </Route>          
+          <Route path='/products'>
+            <Products english={english} russian={russian} uzbek={uzbek} best={false} all={true} saved={false} dataProducts={dataProducts} dataMenu={dataMenu} dataTip={dataTip} showHandleBuy={showHandleBuy} />
+          </Route>
+          <Route path='/catagory1'>
+              <Catagory1 />
+          </Route>
+          <Route  path="/catagory2">
+              <Catagory2 />
+          </Route>
+          <Route path="/catagory3">
+              <Catagory3 />
+          </Route>
+          <Route path="/about">
+              <AboutPage />
+          </Route>
+        </Switch>        
       </div>
     </BrowserRouter>
   );
