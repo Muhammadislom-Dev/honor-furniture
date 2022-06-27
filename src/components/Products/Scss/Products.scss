@@ -1,9 +1,23 @@
+.accordion-name{
+    font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 125%;
+color: #000;
+}
+
+
+
+
+
+
 .Products{
     position: relative;
     padding: 0;
     margin: 0;
     height: 100%;
     width: 100%;
+    // background-color: black;
     // display: flex;
     // align-items: center;
     // justify-content: center;
@@ -250,14 +264,34 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 0;     
+            position: relative;
             @media (max-width:767px){
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 justify-content: space-between;
-            }       
+            } 
+            .all-buy{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 70px;
+                .btn{
+                    border-radius: 0;
+                    border: solid 1px black;
+                    color: white;
+                    padding: 10px 40px;
+                    background-color: black;
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }      
             .prod{                
                 padding: 10px;
                 margin-top: 10px;
+                // transform: translate(-500%);
+                display: none;
                 // border: solid 1px;
                 @media (max-width:767px){
                     width: 100%;                   
@@ -358,6 +392,36 @@
                         .checkbox1:checked ~ .modlab .fa-heart{
                             display: block;
                         }
+                        .checkbox12[type="checkbox"]{
+                            display: none;
+                        }
+                        .checkbox12:checked ~ label .fa-heart-o{
+                            display: none;
+                        }
+                        .checkbox12:checked ~ label .fa-heart{
+                            display: block;
+                        }                       
+                        .checkbox12:checked ~ .modlab .fa-heart-o{
+                            display: none;
+                        }
+                        .checkbox12:checked ~ .modlab .fa-heart{
+                            display: block;
+                        }
+                        .checkbox13[type="checkbox"]{
+                            display: none;
+                        }
+                        .checkbox13:checked ~ label .fa-heart-o{
+                            display: none;
+                        }
+                        .checkbox13:checked ~ label .fa-heart{
+                            display: block;
+                        }                       
+                        .checkbox13:checked ~ .modlab .fa-heart-o{
+                            display: none;
+                        }
+                        .checkbox13:checked ~ .modlab .fa-heart{
+                            display: block;
+                        }
                         p{
                             line-height: 10px;
                             font-size: 15px;
@@ -383,8 +447,64 @@
                         }
                     }
                 }
-            }          
+            }  
+            .middle-main{
+                // transform: translate(0);
+                // position: absolute;
+                // top: 0;
+                display: block;
+            }  
         }
+        .slick-next{       
+            right: -40px;       
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(194, 194, 194); 
+            @media (max-width:500px){
+                width: 25px;
+                height: 25px;
+                right: -20px; 
+            }
+        }
+        .slick-next:before{
+            content: "\f105";
+            font-family: FontAwesome;
+            font-style: normal;   
+            border-radius: 50%;            
+            font-weight: 100;            
+            color: black;                
+            font-size: 35px;
+            font-weight: 900; 
+            @media (max-width:500px){
+                font-size: 25px;
+            }       
+        } 
+        .slick-prev{       
+            left: -40px;       
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(194, 194, 194);
+            @media (max-width:500px){
+                width: 25px;
+                height: 25px;
+                left: -20px; 
+            }
+        }
+        .slick-prev:before{
+            content: "\f104";
+            font-family: FontAwesome;
+            font-style: normal;   
+            border-radius: 50%;         
+            font-weight: 100;            
+            color: black;                
+            font-size: 35px;
+            font-weight: 900; 
+            @media (max-width:500px){
+                font-size: 25px;
+            }       
+        }      
         .one-product{
             // top: 150px;
             top: 10vh;
@@ -428,6 +548,7 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            height: 350px;
                             @media (max-width:1050px){
                                 height: 250px;
                             }
@@ -436,6 +557,7 @@
                             }
                             img{
                                 height: 100%;
+                                max-width: 100%;
                             }
                         }
                     }
@@ -475,6 +597,7 @@
                             img{
                                 position: absolute; 
                                 height: 100%;
+                                max-width: 100%;
                             }
                             p{
                                 font-size: 30px;
@@ -596,7 +719,22 @@
                             }
                             .checkbox1:checked ~ label .fa-heart{
                                 display: block;
-                            }                            
+                            }    
+                            .checkbox13[type="checkbox"]{
+                                display: none;
+                            }
+                            .checkbox13:checked ~ label .fa-heart-o{
+                                display: none;
+                            }
+                            .checkbox13:checked ~ label .fa-heart{
+                                display: block;
+                            }                       
+                            .checkbox13:checked ~ .modlab .fa-heart-o{
+                                display: none;
+                            }
+                            .checkbox13:checked ~ .modlab .fa-heart{
+                                display: block;
+                            }                        
                         }
                     }
                 }
@@ -632,10 +770,10 @@
     }
 }
 ::-webkit-scrollbar-track{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(221, 221, 221);
+    background-color: rgba(133, 212, 212, 0.781);
     border-radius: 10px;
     @media (max-width:767px){
         background-color: rgb(202, 202, 202);
