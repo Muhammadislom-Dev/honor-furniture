@@ -8,22 +8,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10001;
+    z-index: 100001;
 }
 
 .container{
     width: 1140px;
     margin: 0 auto;
 }
+.navbar-splide .container{
+    padding: 20px 0 40px 0;
+}
+
+.navbar__splide{
+    padding-top: 50px;
+}
+
 
 .navbar{
-    
+    // border: solid 1px red;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
     &__modal-btn{
         background-color: transparent;
         border: none;
         outline: none;
         margin-top: 55px;
         margin-left: 120px;
+        // position: absolute;
+        // left: 45%;
     }
 
     &__modal-list{
@@ -71,24 +86,24 @@
     }
 
     &__name{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 800;
-        font-size: 35px;
+        font-size: 21.4412px;
         // line-height: 29px;
         color: #000;
         text-decoration: none;
     }
 
     &__item{
-        padding: 0 15px;
+        padding: 0 20px;
     }
 
     &__link{
         text-decoration: none;        
         font-style: normal;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 14.0833px;
         // line-height: 24px;
         color: rgba(0, 0, 0, 0.5);
         transition: 0.3s;
@@ -120,7 +135,7 @@
     &__lists{
         display: flex;
         justify-content: center;
-        width: 500px;
+        width: 470px;
         margin: 0 auto;
         padding-left: 25px;
         height: 90px;
@@ -147,10 +162,6 @@
     &__phone{
         text-decoration: none;
         transition: 0.5s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
 
         &:hover{
             transform: scale(1.15);
@@ -160,6 +171,8 @@
     &__title{
         display: flex;
         align-items: center;
+        // margin-top: -3px;
+        // margin-left: 12px;
         transition: 0.5s;
     }
 
@@ -174,6 +187,7 @@
 
     &__items{
         background-color: #000;
+        
         border-radius: 4.52162px;
         transition: 0.5s;
 
@@ -183,37 +197,40 @@
     }
 }
 
-// .navbar{
-//     .navbar__page{
-//         padding: 0 100px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         .navbar__name{
-//             font-size: 35px;
-//             font-weight: 800;
-//             font-family: Arial, Helvetica, sans-serif;
-//         }
-//         .navbar__list{
-//             padding-top: 10px;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             li{
-//                 list-style: none;
-//                 a{
-//                     text-decoration: none;
-//                 }
-//                 .navbar__phone{
-//                     display: flex;
-//                     align-items: center;
-//                     justify-content: center;
-//                     padding: 10px;
-//                 }
-//             }
-//         }
-//     }
-// }
+.navbar{
+    .navbar__page{
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border: solid 1px blue;
+        .navbar__name{
+            // border: solid 1px;
+            font-size: 35px;
+            font-weight: 800;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar__list{
+            // border: solid 1px red;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                }
+                .navbar__phone{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
 
  .ReactModal__Overlay  .ReactModal__Content {
     background-color: #DBDBDB;
@@ -239,12 +256,7 @@
     .navbar{
 
         &__item{
-            margin: 0;
-        }
-
-        &__name{
-            font-size: 30px;
-            font-weight:700;
+            margin: 0 12px;
         }
     }
 }
@@ -258,32 +270,15 @@
     .navbar{
 
         &__item{
-            margin: 0;
-        }
-
-        &__link{
-            font-size: 10px;
-        }
-
-        &__name{
-            font-size: 25px;
-        }
-
-        &__page{
-            display: flex;
-            justify-content: center;
+            margin: 0 8px;
         }
 
         &__items{
-            width: 170px;
+            width: 180px;
             height: 50px;
         }
         &__names{
-            font-size: 13px;
-        }
-
-        &__phone{
-            width: 170px;
+            font-size: 14px;
         }
     }
 }
@@ -298,20 +293,12 @@
     .navbar{
 
         &__link{
-            font-size: 8px;
+            font-size: 12px;
+            line-height: 18px;
         }
 
         &__item{
-            margin: 0;
-        }
-
-        &__list{
-            display: flex;
-            justify-content: center;
-        }
-
-        &__title{
-            margin-right: 25px;
+            margin: 0 8px;
         }
 
         &__items{
@@ -320,7 +307,6 @@
         }
         &__names{
             font-size: 12px;
-            width: 110px;
         }
     }
 }
@@ -334,15 +320,12 @@
   .navbar{
 
     &__link{
-        font-size: 7px;
-    }
-
-    &__name{
-        font-size: 22px;
+        font-size: 10px;
+        line-height: 16px;
     }
 
     &__item{
-        margin: 0;
+        margin: 0 5px;
     }
   }
 }
@@ -373,24 +356,7 @@
     .container{
         width: 500px;
     }
-
-    .navbar{
-
-        &__link, &__items{
-            display: none;
-        }
-        &__btn{
-            display: block;
-        }
-        &__page{
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-        }
-    }
 }
-
-
 
 @media (max-width:520px) {
     
@@ -399,22 +365,15 @@
     }
 
     .navbar__lists{
-        width: 330px;
+        width: 380px;
     }
-
-   .navbar__page{
-    display: flex;
-    justify-content: center;
-   }
 
     .navbar__pic{
         width: 50px;
-        height: 40px;
+        height: 50px;
         margin-top: 25px;
         object-fit: contain;
     }
-
-
 }
 
 @media (max-width:420px) {
@@ -424,14 +383,6 @@
     }
 
     .navbar{
-
-        &__list{
-            margin-left: -50px;
-        }
-
-        &__name{
-            margin-left: 15px;
-        }
 
         &__lists{
             width: 310px;
@@ -446,11 +397,5 @@
             font-size: 10px;
         }
         
-        &__pic{
-            object-fit: contain;
-            width: 50px;
-            height: 40px;
-        }
-
     }
 }
