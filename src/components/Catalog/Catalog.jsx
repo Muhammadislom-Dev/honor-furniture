@@ -8,7 +8,7 @@ const Catalog = () => {
             <div className="container">
             <h2 className="catalogy__name">Classic chairs with special design</h2>
                  <div className="catalogy__title">
-                    <a href="#" className="catalogy__link">Catalogue   <img src={arrow} alt="" className="catalogy__img" /></a>
+                 <Link to="/products" className="catalogy__link">Catalogue   <img src={arrow} alt="" className="catalogy__img" /></Link>
                  </div>
 
                  <ul className="catalog__list">

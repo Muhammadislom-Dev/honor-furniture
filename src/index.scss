@@ -29,16 +29,61 @@ html{
     align-items: center;
     justify-content: center;
     padding: 40px 100px;   
-    overflow-y: scroll;   
+    overflow-y: scroll; 
+    @media (max-width:1400px){
+        padding: 40px 50px; 
+    }
+    @media (max-width:1050px){
+        padding: 40px 10px; 
+    } 
+    @media (max-width:950px){
+        width: 80%;
+        left: 10%;
+    } 
+    @media (max-width:767px){
+        width: 70%;
+        left: 15%;
+        padding: 40px 50px;
+    } 
+    @media (max-width:600px){
+        width: 70%;
+        left: 15%;
+        padding: 40px 10px;
+    } 
+    @media (max-width:450px){
+        width: 80%;
+        left: 10%;
+        padding: 40px 10px;
+    }  
+    @media (max-width:380px){
+        width: 90%;
+        left: 5%;
+        padding: 40px 10px;
+    } 
     h1{
         color: black;
         text-align: center;
+        @media (max-width:500px){
+            font-size: 25px;
+        } 
     }
     .row{
         .col-md-6{
             margin-top: 70px;
+            @media (max-width:1300px){
+                padding: 0 20px;
+            }
+            @media (max-width:767px){
+                margin-top: 40px;
+            }
             .price{
                 text-align: left;
+                @media (max-width:1300px){
+                    font-size: 28px;
+                }
+                @media (max-width:500px){
+                    font-size: 22px;
+                }   
             }
             .col-md-12{            
                 position: relative;
@@ -46,16 +91,27 @@ html{
                 background-color: white;
                 transition: 0.3s;        
                 // border: solid 1px; 
-                padding-right: 150px;                       
+                padding-right: 150px;      
+                @media (max-width:1700px){
+                    padding-right: 100px;
+                }
+                @media (max-width:1550px){
+                    padding-right: 50px;
+                }
+                @media (max-width:1300px){
+                    padding: 0px;
+                }
                 h5{
-                    font-size: 30px;
+                    font-size: 30px;      
+                    @media (max-width:1300px){
+                        font-size: 23px;                       
+                    }    
                     @media (max-width:500px){
-                        padding-right: 20px;
-                        font-size: 17px;
-                    }
+                        font-size: 18px;
+                    }          
                 }
                 .answer{
-                    padding: 10px;
+                    padding: 0 10px;
                     .body{
                         display: flex;
                         align-items: center;
@@ -65,10 +121,23 @@ html{
                         p{
                             font-size: 18px;
                             // border: solid 1px;
+                            @media (max-width:1300px){
+                                font-size: 16px;
+                            }
+                            @media (max-width:500px){
+                                font-size: 13px;
+                            }
                         }
                         h6{
                             font-size: 18px;
                             font-weight: 700;
+                            @media (max-width:1300px){
+                                font-size: 16px;
+                            }
+                            @media (max-width:500px){
+                                font-size: 13px;
+                                margin-top: -5px;
+                            }
                         }
                         .delet-checkbox, .eye-checkbox[type="checkbox"]{
                             display: none;
@@ -80,15 +149,27 @@ html{
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background-color: rgb(224, 224, 224);
-                            color: black;
+                            background-color: red;
+                            color: white;
                             font-size: 17px;
                             border-radius: 50%;
                             cursor: pointer;
+                            @media (max-width:1300px){
+                                font-size: 16px;
+                                width: 18px;
+                                height: 18px;
+                                margin-top: -5px;
+                            }
+                            @media (max-width:500px){
+                                font-size: 14px;
+                                width: 16px;
+                                height: 16px;
+                                margin-top: -10px;
+                            }
                         }
-                        .delet-checkbox[type="checkbox"]:checked ~ .delet-prod{
-                            background-color: red;
-                            color: white;
+                        .delet-checkbox[type="checkbox"]:checked ~ .delet-prod{                            
+                            background-color: rgb(224, 224, 224);
+                            color: black;
                         }                        
                         .eye-prod{
                             width: 24px;
@@ -99,7 +180,7 @@ html{
                             justify-content: center;
                             background-color: black;
                             color: black;
-                            font-size: 17px;
+                            // font-size: 17px;
                             border-radius: 50%;
                             cursor: pointer;
                             .visibleoff{
@@ -108,6 +189,20 @@ html{
                             }
                             .visible{
                                 color: white;
+                            }
+                            @media (max-width:1300px){
+                                // font-size: 16px;
+                                width: 22px;
+                                height: 16px;
+                                margin-top: -5px;
+                                padding-bottom: 0px;
+                            }
+                            @media (max-width:500px){
+                                font-size: 12px;
+                                width: 22px;
+                                height: 16px;
+                                margin-top: -10px;
+                                padding-bottom: 0px;
                             }
                         }
                         .eye-checkbox[type="checkbox"]:checked ~ .eye-prod .visibleoff {
@@ -121,32 +216,59 @@ html{
                         border-radius: 0;
                         border: solid 1px black;
                         color: black;
-                        padding: 10px 40px;
+                        padding: 10px 30px;
                         &:hover{
                             background-color: black;
                             color: white;
                         }
+                        @media (max-width:1300px){
+                            padding: 5px 20px;
+                        }
+                        @media (max-width:500px){
+                            font-size: 14px;
+                            padding: 5px 15px;
+                        }   
                     }
                     .cash, .location{
                         border-radius: 0;
                         border: solid 1px black;
                         color: white;
-                        padding: 10px 40px;
+                        padding: 10px 30px;
                         background-color: black;
                         &:hover{
                             background-color: white;
                             color: black;
                         }
+                        @media (max-width:1300px){
+                            padding: 5px 20px;
+                        }
+                        @media (max-width:500px){
+                            font-size: 14px;
+                            padding: 5px 15px;
+                        }  
                     }
                 }
                 .fa-chevron-down{                    
                     color: black;   
                     cursor: pointer; 
-                    font-size: 20px;                                                
+                    font-size: 20px;  
+                    @media (max-width:1300px){
+                        font-size: 16px;
+                    }                                              
                 }                                              
             }
             .delivery{
                 margin-top: 20px;
+                .border-dark{
+                    padding: 8px 10px;
+                    @media (max-width:1300px){
+                        padding: 6px 6px;
+                        font-size: 18px;
+                    }
+                    @media (max-width:500px){
+                        font-size: 16px;                      
+                    } 
+                }
             }
         }
     }
@@ -157,13 +279,48 @@ html{
         right: 30px;
         font-size: 28px;
         cursor: pointer;
+        @media (max-width:600px){
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+        }
+    }
+    .info-user{
+        margin-top: 50px;
+        padding: 0 10px;
+        h5{
+            font-size: 30px;      
+            @media (max-width:1300px){
+                font-size: 23px;                       
+            }    
+            @media (max-width:500px){
+                font-size: 18px;
+            }          
+        }
+        .fa-chevron-down{                    
+            color: black;   
+            cursor: pointer; 
+            font-size: 20px;  
+            @media (max-width:1300px){
+                font-size: 16px;
+            }                                              
+        }  
+        .col-md-6{
+            margin-top: 10px;
+            .red-line{
+                border: solid 1px red;              
+            }
+        }
     }
     .btns{
         // border: solid 1px;
         display: flex;  
-        margin-top: 150px;      
+        margin-top: 50px;      
         align-items: center;
         justify-content: center;
+        @media (max-width:767px){
+            margin-top: 70px;   
+        }
         .btn{
             padding: 10px 60px;     
             border-radius: 0;
@@ -174,9 +331,72 @@ html{
                 background-color: white;
                 color: darkcyan;
                 border: solid 2px darkcyan;
-            }        
+            }   
+            @media (max-width:500px){
+                font-size: 16px;
+                padding: 10px 40px;
+            }       
         }
     }
+}
+.buy-ok{
+    position: fixed;
+    top: -150%;
+    transition: 0.4s;
+    z-index: 500005;
+    background-color: darkcyan;    
+    align-items: center;
+    justify-content: center;
+    padding: 70px 150px;
+    border-radius: 10px;
+    @media (max-width:500px){
+        width: 90%;
+        left: 5%;
+    }
+    @media (max-width:450px){
+        padding: 70px 30px;
+    }
+    h1{
+        color: white;
+        text-align: center;
+    }
+    .fa-times{
+        position: absolute;
+        color: white;
+        top: 30px;
+        left: 30px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .btn{
+        padding: 10px 40px;
+        margin-top: 50px;
+        border: solid 2px white;
+        border-radius: 15px;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        &:hover{
+            background-color: white;
+            color: darkcyan;
+        }
+        @media (max-width:500px){
+            margin-top: 20px;            
+        }
+    }
+}
+.contrast{
+    background-color: rgba(0, 0, 0, 0.699);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500004;
 }
 .show-modal{
      top: 10%;
@@ -197,8 +417,8 @@ html{
         width: 150px;
         height: 150px;
         border: solid 10px white;
-        border-left-color: #EC691F;
-        border-top-color: #EC691F;
+        border-left-color: rgb(1, 2, 58);
+        border-top-color: rgb(1, 2, 58);
         animation-name: loader;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -229,10 +449,7 @@ body {
       monospace;
   }
   
-//   .container{
-//     width: 1140px;
-//     margin: 0 auto;
-//   }
+ 
   
   html{
     scroll-behavior: smooth;
